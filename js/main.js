@@ -64,6 +64,13 @@ const increment = (id) => {
 
   // Vill att uptade funktions körs när det blir klikad
   uptade(selectedValue);
+
+  // Custom Event Tracking - Button Click
+  gtag("event", "button_click", {
+    event_category: "interactions on products",
+    event_label: "adding products to cart",
+    value: 1,
+  });
 };
 
 const decrement = (id) => {
